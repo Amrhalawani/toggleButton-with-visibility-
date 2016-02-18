@@ -1,0 +1,37 @@
+package com.test.hal.amr.test21;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.ToggleButton;
+
+public class MainActivity extends AppCompatActivity {
+    TextView textview; //لازم هنا عشان تبقي بابليك ويشوفها الاونكليك ميثود وكمان الاونكريت
+    // ووقفت معايا المشكله دي 
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        textview = (TextView) findViewById(R.id.textView); // تقريبا الفيوز كلها لازم تتعرف هنا
+
+
+    }
+
+public void WhenOnClick(View view){
+    boolean checked = ((ToggleButton)view).isChecked();
+
+    if (checked){
+        textview.setText("visible");
+        textview.setVisibility(View.VISIBLE);
+
+}
+    else {
+        textview.setVisibility(View.INVISIBLE);
+    }
+}
+
+
+}
+
